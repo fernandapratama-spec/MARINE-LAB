@@ -1,35 +1,65 @@
-<div class="container" id="referensi">
-    <h2 class="section-title">Pilih Program Studi</h2>
-    <div class="circle-container">
-        <div class="circle-item">
-            <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                <img src="prodi1.gif" alt="Teknik Perkapalan">
-            </a>
-            <p class="prodi-label">Teknik Perkapalan</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referensi | MARINE-LAB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f0f4f8; }
+        
+        /* Navbar tetep sama */
+        .navbar { background-color: #004D40 !important; }
+        .navbar-brand, .nav-link { color: white !important; }
+
+        .section-title { color: #004D40; font-weight: 700; margin: 50px 0; text-align: center; }
+        
+        /* INI KUNCI BIAR GAK LUCU: Memaksa gambar masuk ke lingkaran */
+        .circle-btn {
+            width: 180px; height: 180px; border-radius: 50%;
+            background: white; border: 5px solid #004D40;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 15px; overflow: hidden; transition: 0.4s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .circle-btn:hover { transform: scale(1.1); border-color: #ffb74d; }
+        
+        /* Paksa gambar GIF mengisi penuh lingkaran tanpa meluap */
+        .circle-btn img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; /* Ini biar gambar gak gepeng */
+        }
+
+        .prodi-label { font-weight: 600; color: #004D40; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MARINE-LAB</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="referensi.html">Referensi</a>
+            </div>
         </div>
-        <div class="circle-item">
-            <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                <img src="prodi2.gif" alt="Teknik Kelautan">
-            </a>
-            <p class="prodi-label">Teknik Kelautan</p>
-        </div>
-        <div class="circle-item">
-            <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                <img src="prodi3.gif" alt="Teknik Sistem Perkapalan">
-            </a>
-            <p class="prodi-label">Teknik Sistem Perkapalan</p>
-        </div>
-        <div class="circle-item">
-            <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                <img src="prodi4.gif" alt="Teknik Transportasi Laut">
-            </a>
-            <p class="prodi-label">Teknik Transportasi Laut</p>
-        </div>
-        <div class="circle-item">
-            <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                <img src="prodi5.gif" alt="Teknik Lingkungan">
-            </a>
-            <p class="prodi-label">Teknik Lingkungan</p>
-        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Program Studi</h2>
+        <div class="row justify-content-center g-5">
+            
+            <div class="col-md-4 col-6 text-center">
+                <a href="LINK_DRIVE_ANDA" target="_blank" class="circle-btn">
+                    <img src="prodi1.gif" alt="Prodi 1">
+                </a>
+                <p class="prodi-label">Teknik Perkapalan</p>
+            </div>
+
+            </div>
     </div>
-</div>
+
+</body>
+</html>
