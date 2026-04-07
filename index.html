@@ -3,121 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARINE-LAB | ITK</title>
+    <title>MARINE-LAB | Portal Utama</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #f0f4f8; }
-        
-        /* Navigasi / Tab Menu */
-        .navbar { background-color: #004D40 !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .navbar-brand, .nav-link { color: white !important; font-weight: 500; }
-        .nav-link:hover { color: #ffb74d !important; border-bottom: 2px solid #ffb74d; }
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
 
-        /* Banner Utama */
-        .hero { 
-            background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 33, 27, 0.8)), url('https://images.unsplash.com/photo-1517373116369-9bdb8ca51622?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover; background-position: center;
-            color: white; padding: 100px 0; text-align: center;
+        /* Navbar Stylish */
+        .navbar { background-color: #004D40 !important; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 700; letter-spacing: 1px; color: white !important; }
+        .nav-link { color: rgba(255,255,255,0.8) !important; font-weight: 500; margin-left: 20px; transition: 0.3s; }
+        .nav-link:hover { color: #ffb74d !important; }
+        .nav-link.active { color: #ffb74d !important; border-bottom: 2px solid #ffb74d; }
+
+        /* Hero Section - Banner Besar */
+        .hero-section {
+            background: linear-gradient(rgba(0, 77, 64, 0.6), rgba(0, 33, 27, 0.8)), 
+                        url('https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=1500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            border-bottom: 8px solid #ffb74d;
         }
+        .hero-section h1 { font-size: 4rem; font-weight: 800; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+        .hero-section p { font-size: 1.4rem; opacity: 0.9; max-width: 800px; margin: 20px auto; }
 
-        /* Container Menu Lingkaran */
-        .section-title { color: #004D40; font-weight: 700; margin: 40px 0; text-align: center; }
-        .circle-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; }
-        .circle-item { text-align: center; width: 180px; }
-        
-        .circle-btn {
-            width: 150px; height: 150px; border-radius: 50%;
-            background: white; border: 5px solid #004D40;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 15px; overflow: hidden; transition: 0.4s;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        /* Kartu Menu Utama */
+        .menu-card {
+            border: none;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
         }
-        .circle-btn:hover { transform: scale(1.1); border-color: #ffb74d; box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
-        .circle-btn img { width: 100%; height: 100%; object-fit: cover; }
-        .prodi-label { font-weight: 600; color: #004D40; font-size: 0.9rem; }
+        .menu-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .icon-box {
+            height: 100px;
+            width: 100px;
+            background: #e0f2f1;
+            color: #004d40;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 30px auto 20px;
+            transition: 0.3s;
+        }
+        .menu-card:hover .icon-box { background: #004d40; color: white; }
+        .card-title { font-weight: 700; color: #004D40; }
+        .btn-custom {
+            background-color: #004D40;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-custom:hover { background-color: #ffb74d; color: #004d40; }
 
-        /* Form Saran */
-        .feedback-card { background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: 50px auto; max-width: 800px; }
-        .btn-send { background: #004D40; color: white; border-radius: 25px; padding: 10px 30px; border: none; font-weight: 600; }
-        .btn-send:hover { background: #00332c; }
+        /* Footer */
+        footer { background: #1a1a1a; color: white; padding: 40px 0; margin-top: 80px; }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">MARINE-LAB</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-anchor me-2"></i>MARINE-LAB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="referensi.html">Referensi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="deposit.html">Deposit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="saran.html">Saran</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Deposit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tutorial</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero-section">
         <div class="container">
-            <h1 class="display-4 fw-bold">PORTAL REFERENSI DIGITAL</h1>
-            <p class="lead">Pangkalan Data Akademik Jurusan Teknologi Maritim - ITK</p>
+            <h1 class="animate__animated animate__fadeInDown">WELCOME TO MARINE-LAB</h1>
+            <p class="animate__animated animate__fadeInUp">Pusat Pangkalan Data Akademik Terpadu Jurusan Teknologi Maritim - Institut Teknologi Kalimantan</p>
+            <a href="#main-menu" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill mt-4 shadow">Jelajahi Sekarang</a>
         </div>
     </header>
 
-    <div class="container" id="referensi">
-        <h2 class="section-title">Pilih Program Studi</h2>
-        <div class="circle-container">
-            <div class="circle-item">
-                <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                    <img src="https://via.placeholder.com/150?text=Prodi+1" alt="Prodi 1">
-                </a>
-                <p class="prodi-label">Teknik Perkapalan</p>
-            </div>
-            <div class="circle-item">
-                <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                    <img src="https://via.placeholder.com/150?text=Prodi+2" alt="Prodi 2">
-                </a>
-                <p class="prodi-label">Teknik Kelautan</p>
-            </div>
-            <div class="circle-item">
-                <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                    <img src="https://via.placeholder.com/150?text=Prodi+3" alt="Prodi 3">
-                </a>
-                <p class="prodi-label">Teknik Sistem Perkapalan</p>
-            </div>
-            <div class="circle-item">
-                <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                    <img src="https://via.placeholder.com/150?text=Prodi+4" alt="Prodi 4">
-                </a>
-                <p class="prodi-label">Teknik Transportasi Laut</p>
-            </div>
-            <div class="circle-item">
-                <a href="https://drive.google.com" target="_blank" class="circle-btn">
-                    <img src="https://via.placeholder.com/150?text=Prodi+5" alt="Prodi 5">
-                </a>
-                <p class="prodi-label">Teknik Lingkungan</p>
-            </div>
+    <div class="container my-5 py-5" id="main-menu">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #004D40;">Layanan Utama Kami</h2>
+            <div style="width: 80px; height: 5px; background: #ffb74d; margin: 10px auto;"></div>
         </div>
-    </div>
 
-    <div class="container" id="saran">
-        <div class="feedback-card text-center">
-            <h2 class="mb-4">Kuesioner Saran & Kritik</h2>
-            <p class="text-muted mb-4">Masukan Anda sangat berharga untuk pengembangan MARINE-LAB ke depan.</p>
-            <div class="row text-start">
-                <div class="col-md-12 mb-3">
-                    <label class="form-label fw-bold">Saran Anda</label>
-                    <textarea class="form-control" rows="4" placeholder="Tulis masukan di sini..."></textarea>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card menu-card p-4">
+                    <div class="icon-box"><i class="fas fa-book-open"></i></div>
+                    <div class="card-body">
+                        <h4 class="card-title">Referensi Digital</h4>
+                        <p class="text-muted">Akses data akademik, kurikulum, dan materi kuliah dari 5 Program Studi Teknologi Maritim.</p>
+                        <a href="referensi.html" class="btn btn-custom mt-3">Buka Referensi</a>
+                    </div>
                 </div>
             </div>
-            <button class="btn btn-send" onclick="alert('Terima kasih!')">Kirim Masukan</button>
+
+            <div class="col-md-4">
+                <div class="card menu-card p-4">
+                    <div class="icon-box"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <div class="card-body">
+                        <h4 class="card-title">Deposit Data</h4>
+                        <p class="text-muted">Simpan dan kumpulkan dokumen penting akademik Anda dengan aman dalam satu pangkalan data.</p>
+                        <a href="#" class="btn btn-custom mt-3">Upload Data</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card menu-card p-4">
+                    <div class="icon-box"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="card-body">
+                        <h4 class="card-title">Panduan & Saran</h4>
+                        <p class="text-muted">Panduan penggunaan sistem serta ruang bagi Anda untuk memberikan saran pengembangan.</p>
+                        <a href="#" class="btn btn-custom mt-3">Lihat Panduan</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white py-4 text-center mt-5">
-        <p class="mb-0">&copy; 2026 Jurusan Teknologi Maritim - ITK</p>
+    <footer class="text-center">
+        <div class="container">
+            <img src="https://itk.ac.id/wp-content/uploads/2020/07/Logo-ITK-White.png" alt="ITK Logo" height="60" class="mb-4">
+            <p class="mb-1">Jurusan Teknologi Maritim</p>
+            <p class="mb-4 text-muted">Institut Teknologi Kalimantan</p>
+            <div class="mb-4">
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-globe fa-lg"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fas fa-envelope fa-lg"></i></a>
+            </div>
+            <hr style="background: gray;">
+            <p class="small text-muted">&copy; 2026 MARINE-LAB | Dikembangkan oleh Fernanda Pratama</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
