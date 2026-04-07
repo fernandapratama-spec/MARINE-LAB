@@ -11,13 +11,13 @@
     <style>
         body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
 
-        /* Navbar Hijau Bapak yang lama */
-        .navbar { background-color: #004D40 !important; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        /* Navbar Hijau */
+        .navbar { background-color: #004D40 !important; padding: 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .navbar-brand { font-weight: 700; color: white !important; }
         .nav-link { color: rgba(255,255,255,0.8) !important; font-weight: 500; margin-left: 20px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: #ffb74d !important; }
 
-        /* Hero Section dengan Gambar Latar (Kembali Seperti Semula) */
+        /* Hero Section dengan Gambar Latar */
         .hero-section {
             background: linear-gradient(rgba(0, 77, 64, 0.6), rgba(0, 33, 27, 0.8)), 
                         url('https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=1500&auto=format&fit=crop');
@@ -31,56 +31,62 @@
             color: white;
             text-align: center;
             border-bottom: 8px solid #ffb74d;
+            padding: 40px 20px;
         }
 
-        /* UKURAN LOGO DI HEADER (Sudah Dijinakkan) */
         .hero-logo {
-            max-width: 200px; /* Bapak bisa ganti angka ini kalau mau lebih besar/kecil */
+            max-width: 180px;
             height: auto;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .hero-section h1 { font-size: 3.5rem; font-weight: 800; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+        .hero-section h1 { font-size: calc(1.8rem + 1.5vw); font-weight: 800; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
 
-        /* Kartu Menu Bapak yang Bagus */
+        /* Kartu Menu */
         .menu-card {
             border: none;
             border-radius: 20px;
             transition: all 0.4s ease;
             background: white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
         }
-        .menu-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .menu-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
         .icon-box {
-            height: 90px; width: 90px;
+            height: 80px; width: 80px;
             background: #e0f2f1; color: #004d40;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 2.2rem; margin: 30px auto 20px;
+            font-size: 2rem; margin: 20px auto;
         }
 
-        /* SETTING FOOTER (Sesuai Gambar 2) */
+        /* Footer */
         .custom-footer {
             background-color: #004D40; 
             background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
             color: white;
             padding: 40px 0;
-            margin-top: 80px;
+            margin-top: 60px;
         }
-        .footer-logo { max-height: 80px; width: auto; }
-        .footer-text { font-size: 0.9rem; line-height: 1.6; }
+        .footer-logo { max-height: 70px; width: auto; }
+        .footer-text { font-size: 0.85rem; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fas fa-anchor me-2"></i>MARINE-LAB</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="referensi.html">Referensi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="deposit.html">Deposit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="panduan.html">Panduan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Deposit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Panduan</a></li>
                 </ul>
             </div>
         </div>
@@ -91,41 +97,41 @@
             <img src="logoitkw.png" class="hero-logo" alt="Logo ITK">
             <h1>WELCOME TO MARINE-LAB</h1>
             <p class="lead">Pangkalan Data Akademik Terpadu Jurusan Teknologi Maritim - ITK</p>
-            <a href="#main-menu" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill mt-4 shadow">Jelajahi Sekarang</a>
+            <a href="#main-menu" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill mt-3 shadow">Jelajahi Sekarang</a>
         </div>
     </header>
 
-    <div class="container my-5 py-5" id="main-menu">
+    <div class="container my-5 py-4" id="main-menu">
         <div class="text-center mb-5">
             <h2 class="fw-bold" style="color: #004D40;">Layanan Utama Kami</h2>
-            <div style="width: 80px; height: 5px; background: #ffb74d; margin: 10px auto;"></div>
+            <div style="width: 60px; height: 5px; background: #ffb74d; margin: 10px auto;"></div>
         </div>
 
         <div class="row g-4 text-center">
             <div class="col-md-4">
                 <div class="card menu-card p-4">
                     <div class="icon-box"><i class="fas fa-book-open"></i></div>
-                    <h4 class="fw-bold" style="color: #004D40;">Referensi Digital</h4>
-                    <p class="text-muted">Akses data akademik dari 5 Program Studi Teknologi Maritim.</p>
-                    <a href="referensi.html" class="btn btn-success rounded-pill px-4">Buka Referensi</a>
+                    <h4 class="fw-bold" style="color: #004D40;">Referensi</h4>
+                    <p class="text-muted small">Akses data akademik dari 5 Program Studi Teknologi Maritim.</p>
+                    <a href="referensi.html" class="btn btn-success rounded-pill w-100">Buka Referensi</a>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card menu-card p-4">
                     <div class="icon-box"><i class="fas fa-cloud-upload-alt"></i></div>
-                    <h4 class="fw-bold" style="color: #004D40;">Deposit Data</h4>
-                    <p class="text-muted">Simpan dokumen penting akademik Anda dengan aman.</p>
-                    <a href="#" class="btn btn-success rounded-pill px-4">Upload Data</a>
+                    <h4 class="fw-bold" style="color: #004D40;">Deposit</h4>
+                    <p class="text-muted small">Simpan dokumen penting akademik Anda dengan aman.</p>
+                    <a href="#" class="btn btn-success rounded-pill w-100">Upload Data</a>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card menu-card p-4">
                     <div class="icon-box"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h4 class="fw-bold" style="color: #004D40;">Panduan & Saran</h4>
-                    <p class="text-muted">Panduan sistem serta ruang bagi Anda untuk saran pengembangan.</p>
-                    <a href="#" class="btn btn-success rounded-pill px-4">Lihat Panduan</a>
+                    <h4 class="fw-bold" style="color: #004D40;">Panduan</h4>
+                    <p class="text-muted small">Panduan sistem serta ruang bagi Anda untuk saran.</p>
+                    <a href="#" class="btn btn-success rounded-pill w-100">Lihat Panduan</a>
                 </div>
             </div>
         </div>
@@ -139,10 +145,9 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-text">
-                        <h5 class="fw-bold mb-1">Institut Teknologi Kalimantan</h5>
+                        <h6 class="fw-bold mb-1">Institut Teknologi Kalimantan</h6>
                         <p class="mb-0">Jalan Soekarno-Hatta Km.15, Karang Joang,</p>
-                        <p class="mb-0">Kec. Balikpapan Utara, Balikpapan</p>
-                        <p class="mb-0">Kalimantan Timur</p>
+                        <p class="mb-0">Balikpapan Utara, Kalimantan Timur</p>
                     </div>
                 </div>
             </div>
