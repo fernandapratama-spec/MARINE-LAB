@@ -11,95 +11,64 @@
     <style>
         body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
 
-        /* Navbar Stylish */
-        .navbar { background-color: #004D40 !important; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: 700; letter-spacing: 1px; color: white !important; }
+        /* Navbar */
+        .navbar { background-color: #004D40 !important; padding: 10px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 700; color: white !important; }
         .nav-link { color: rgba(255,255,255,0.8) !important; font-weight: 500; margin-left: 20px; transition: 0.3s; }
-        .nav-link:hover { color: #ffb74d !important; }
-        .nav-link.active { color: #ffb74d !important; border-bottom: 2px solid #ffb74d; }
+        .nav-link:hover, .nav-link.active { color: #ffb74d !important; }
 
-        /* Hero Section - Banner Besar */
+        /* Hero Section - Diperkecil tingginya */
         .hero-section {
-            background: linear-gradient(rgba(0, 77, 64, 0.6), rgba(0, 33, 27, 0.8)), 
+            background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 33, 27, 0.9)), 
                         url('https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=1500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            min-height: 50vh; /* Dikurangi dari 80vh agar tidak terlalu memenuhi layar */
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            border-bottom: 8px solid #ffb74d;
-        }
-        .hero-section h1 { font-size: 4rem; font-weight: 800; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
-        .hero-section p { font-size: 1.4rem; opacity: 0.9; max-width: 800px; margin: 20px auto; }
-
-        /* Kartu Menu Utama */
-        .menu-card {
-            border: none;
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            overflow: hidden;
-            background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            height: 100%;
-        }
-        .menu-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-        .icon-box {
-            height: 100px;
-            width: 100px;
-            background: #e0f2f1;
-            color: #004d40;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            margin: 30px auto 20px;
-            transition: 0.3s;
-        }
-        .menu-card:hover .icon-box { background: #004d40; color: white; }
-        .card-title { font-weight: 700; color: #004D40; }
-        .btn-custom {
-            background-color: #004D40;
-            color: white;
-            border-radius: 25px;
-            padding: 10px 25px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .hero-section {
-            backgorund-color: #004D40;
-            min-height: 60vh;
-            display: flex;
-            align-item: center;
+            align-items: center; /* Perbaikan typo: align-item -> align-items */
             justify-content: center;
             flex-direction: column;
             color: white;
+            text-align: center;
             padding: 40px 20px;
-        }
-
-        .hero-logo {
-            max-width :300px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .custom-footer {
-            backgroung-color: #1a4a9c; /* Biru sesuai gambar */
-            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Pola halus */
-            color: white;
-            padding: 30px 0;
+            border-bottom: 5px solid #ffb74d;
         }
         
-        .btn-custom:hover { background-color: #ffb74d; color: #004d40; }
+        .hero-logo {
+            max-width: 180px; /* Ukuran logo di banner diperkecil */
+            height: auto;
+            margin-bottom: 15px;
+        }
 
-        /* Footer */
-        footer { background: #1a1a1a; color: white; padding: 40px 0; margin-top: 80px; }
-        .fotter-logo { max-height: 80px; width: auto; }
-        .footer-text { font-size: 0.9rem; line-height: 1.6; }
+        .hero-section h1 { font-size: 2.5rem; font-weight: 800; } /* Ukuran font judul diperkecil */
+        .hero-section p { font-size: 1.1rem; opacity: 0.9; max-width: 700px; }
+
+        /* Kartu Menu */
+        .menu-card {
+            border: none;
+            border-radius: 15px;
+            transition: 0.3s;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .menu-card:hover { transform: translateY(-10px); }
+        .icon-box {
+            height: 80px; width: 80px; /* Ukuran icon box diperkecil */
+            background: #e0f2f1; color: #004d40;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin: 20px auto;
+        }
+
+        /* Footer Biru */
+        .custom-footer {
+            background-color: #1a4a9c; /* Perbaikan typo: backgroung -> background */
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            color: white;
+            padding: 25px 0;
+            margin-top: 50px;
+        }
+        .footer-logo { max-height: 60px; width: auto; } /* Perbaikan typo class: fotter -> footer */
+        .footer-text { font-size: 0.85rem; line-height: 1.5; }
     </style>
 </head>
 <body>
@@ -107,9 +76,6 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fas fa-anchor me-2"></i>MARINE-LAB</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -122,50 +88,43 @@
     </nav>
 
     <header class="hero-section">
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">WELCOME TO MARINE-LAB</h1>
-            <p class="animate__animated animate__fadeInUp">Pusat Pangkalan Data Akademik Terpadu Jurusan Teknologi Maritim - Institut Teknologi Kalimantan</p>
-            <a href="#main-menu" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill mt-4 shadow">Jelajahi Sekarang</a>
+        <div class="container text-center">
+            <img src="logoitkw.png" class="hero-logo" alt="Logo ITK">
+            <h1>WELCOME TO MARINE-LAB</h1>
+            <p>Pusat Pangkalan Data Akademik Terpadu Jurusan Teknologi Maritim<br>Institut Teknologi Kalimantan</p>
+            <a href="#main-menu" class="btn btn-warning fw-bold px-4 rounded-pill mt-3 shadow">Jelajahi Sekarang</a>
         </div>
     </header>
 
-    <div class="container my-5 py-5" id="main-menu">
+    <div class="container my-5" id="main-menu">
         <div class="text-center mb-5">
             <h2 class="fw-bold" style="color: #004D40;">Layanan Utama Kami</h2>
-            <div style="width: 80px; height: 5px; background: #ffb74d; margin: 10px auto;"></div>
+            <div style="width: 50px; height: 4px; background: #ffb74d; margin: 10px auto;"></div>
         </div>
 
         <div class="row g-4 text-center">
             <div class="col-md-4">
-                <div class="card menu-card p-4">
+                <div class="card menu-card p-3">
                     <div class="icon-box"><i class="fas fa-book-open"></i></div>
-                    <div class="card-body">
-                        <h4 class="card-title">Referensi Digital</h4>
-                        <p class="text-muted">Akses data akademik, kurikulum, dan materi kuliah dari 5 Program Studi Teknologi Maritim.</p>
-                        <a href="referensi.html" class="btn btn-custom mt-3">Buka Referensi</a>
-                    </div>
+                    <h5 class="fw-bold">Referensi Digital</h5>
+                    <p class="small text-muted">Akses data akademik dari 5 Program Studi.</p>
+                    <a href="referensi.html" class="btn btn-outline-success btn-sm rounded-pill">Buka Referensi</a>
                 </div>
             </div>
-
             <div class="col-md-4">
-                <div class="card menu-card p-4">
+                <div class="card menu-card p-3">
                     <div class="icon-box"><i class="fas fa-cloud-upload-alt"></i></div>
-                    <div class="card-body">
-                        <h4 class="card-title">Deposit Data</h4>
-                        <p class="text-muted">Simpan dan kumpulkan dokumen penting akademik Anda dengan aman dalam satu pangkalan data.</p>
-                        <a href="#" class="btn btn-custom mt-3">Upload Data</a>
-                    </div>
+                    <h5 class="fw-bold">Deposit Data</h5>
+                    <p class="small text-muted">Simpan dokumen penting Anda dengan aman.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill">Upload Data</a>
                 </div>
             </div>
-
             <div class="col-md-4">
-                <div class="card menu-card p-4">
+                <div class="card menu-card p-3">
                     <div class="icon-box"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <div class="card-body">
-                        <h4 class="card-title">Panduan & Saran</h4>
-                        <p class="text-muted">Panduan penggunaan sistem serta ruang bagi Anda untuk memberikan saran pengembangan.</p>
-                        <a href="#" class="btn btn-custom mt-3">Lihat Panduan</a>
-                    </div>
+                    <h5 class="fw-bold">Panduan & Saran</h5>
+                    <p class="small text-muted">Ruang panduan dan saran pengembangan.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill">Lihat Panduan</a>
                 </div>
             </div>
         </div>
@@ -179,10 +138,9 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                      <div class="footer-text">
-                        <h5 class="fw-bold mb-1">Institut Teknologi Kalimantan</h5>
+                        <h6 class="fw-bold mb-1">Institut Teknologi Kalimantan</h6>
                         <p class="mb-0">Jalan Soekarno-Hatta Km.15, Karang Joang,</p>
-                        <p class="mb-0">Kec. Balikpapan Utara, Balikpapan</p>
-                        <p class="mb-0">Kalimantan Timur</p>
+                        <p class="mb-0">Balikpapan Utara, Kalimantan Timur</p>
                     </div>
                 </div>
             </div>
